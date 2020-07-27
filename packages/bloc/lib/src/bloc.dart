@@ -258,7 +258,7 @@ abstract class Bloc<Event, State> extends Stream<State> implements Sink<Event> {
         ),
       ),
     ).listen((transition) {
-      if (transition.nextState == state) return;
+//      if (transition.nextState == state) return;
       try {
         onTransition(transition);
         _state = transition.nextState;
